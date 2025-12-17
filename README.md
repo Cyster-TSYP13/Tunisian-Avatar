@@ -22,12 +22,13 @@ Tunisian‑Avatar empowers young users by:
 
 ## 📂 Repository Structure
 
-Tunisian‑Avatar/
-├── Tunisian_Agentic_RAG      # Responsible for Reasoning & Response Generation
-├── Tunisian_STT              # Speech‑to‑Text (converts spoken Tunisian Arabic into text)
-├── Tunisian_TTS              # Text‑to‑Speech (generates spoken voice in Tunisian dialect)
-├── README.md                 # This file
-└── other files
+Tunisian-Avatar/
+|-- Tunisian_Agentic_RAG      # Responsible for Reasoning & Response Generation
+|-- Tunisian_STT              # Speech-to-Text (converts spoken Tunisian Arabic into text)
+|-- Tunisian_TTS              # Text-to-Speech (generates spoken voice in Tunisian dialect)
+|-- README.md                 # This file
+`-- other files
+
 
 
 ---
