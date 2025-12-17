@@ -1,0 +1,86 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+wheels/
+pip-wheel-metadata/
+*.egg-info/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+venv.bak/
+env.bak/
+
+# Common local venv contents (some projects keep env under `test/`)
+test/bin/
+test/include/
+test/lib/
+test/pyvenv.cfg
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# dotenv
+.env
+.env.*
+
+# Logs and databases
+*.log
+logs/
+*.sql
+*.sqlite3
+*.db
+chromadb_data/
+
+# Test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.nox/
+
+# Type check / linters
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.isort_cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Build system
+__pypackages__/
+
+# Misc
+*.manifest
+*.spec
+*~
+*.swp
+*.swo
+credentials
+.secret

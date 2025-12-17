@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+.venv/
+.DS_Store
+
+# Model Weights (Large files)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+
+# HuggingFace/Model directories (optional, if you want to exclude the whole folders)
+# wav2vec2-large-xlsr-53/
+# LLM/
+# BiCodec/

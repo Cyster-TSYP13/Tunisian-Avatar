@@ -1,0 +1,83 @@
+{
+    "model_type": "spark-tts",
+    "architectures": [
+        "SparkTTSModel"
+    ],
+        "auto_map": {
+        "AutoConfig": "configuration_spark_tts.SparkTTSConfig",
+        "AutoModel": "modeling_spark_tts.SparkTTSModel",
+        "AutoProcessor": "processing_spark_tts.SparkTTSProcessor"
+    },
+    "processor_class": "processing_spark_tts.SparkTTSProcessor",
+    "llm_model_name_or_path": "./LLM",                     
+    "bicodec_model_name_or_path": "./BiCodec",              
+    "wav2vec2_model_name_or_path": "./wav2vec2-large-xlsr-53", 
+    "sample_rate": 16000,
+    "highpass_cutoff_freq": 40,
+    "latent_hop_length": 320,
+    "ref_segment_duration": 6.0,
+    "volume_normalize": true,
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.50.3", 
+    "_commit_hash": null, 
+    "bicodec_config": {                  
+        "mel_params": {
+            "sample_rate": 16000,
+            "n_fft": 1024,
+            "win_length": 640,
+            "hop_length": 320,
+            "mel_fmin": 10,
+            "mel_fmax": null,
+            "num_mels": 128
+        },
+        "encoder_config": {                 
+            "input_channels": 1024,
+            "vocos_dim": 384,
+            "vocos_intermediate_dim": 2048,
+            "vocos_num_layers": 12,
+            "out_channels": 1024,
+            "sample_ratios": [1, 1]
+        },
+        "decoder_config": {                 
+            "input_channel": 1024,
+            "channels": 1536,
+            "rates": [8, 5, 4, 2],
+            "kernel_sizes": [16, 11, 8, 4]
+        },
+        "quantizer_config": {               
+            "input_dim": 1024,
+            "codebook_size": 8192,
+            "codebook_dim": 8,
+            "commitment": 0.25,
+            "codebook_loss_weight": 2.0,
+            "decay": 0.99,
+            "threshold_ema_dead_code": 0.2
+        },
+        "speaker_encoder_config": {         
+            "input_dim": 128,
+            "out_dim": 1024,
+            "latent_dim": 128,
+            "token_num": 32,
+            "fsq_levels": [4, 4, 4, 4, 4, 4],
+            "fsq_num_quantizers": 1
+        },
+        "prenet_config": {                  
+            "input_channels": 1024,
+            "vocos_dim": 384,
+            "vocos_intermediate_dim": 2048,
+            "vocos_num_layers": 12,
+            "out_channels": 1024,
+            "condition_dim": 1024,
+            "sample_ratios": [1, 1],
+            "use_tanh_at_final": false
+        },
+        "postnet_config": {                 
+            "input_channels": 1024,
+            "vocos_dim": 384,
+            "vocos_intermediate_dim": 2048,
+            "vocos_num_layers": 6,
+            "out_channels": 1024,
+            "use_tanh_at_final": false
+        }
+    }
+}

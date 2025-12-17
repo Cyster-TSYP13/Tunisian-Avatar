@@ -1,0 +1,16 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+env/
+test/
+dist/
+build/
+.venv
+chromadb_data/
+*.sqlite3
+*.tar.gz
+*.log
+/.git
+/.github
